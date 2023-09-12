@@ -1,0 +1,20 @@
+name: Publish Release
+
+on:
+  push:
+    branches: [testrelease]
+
+permissions:
+  contents: write
+  
+jobs:
+  publish-website:
+    name: Publish to the production website
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: testrelease
+      - name: Push to release branch  
+        run: |
+          git push --upstream --force
