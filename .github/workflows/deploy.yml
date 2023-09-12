@@ -24,4 +24,4 @@ jobs:
           ref: release
       - name: Push to release branch  
         run: |
-          git push -u -f
+          git push --force
