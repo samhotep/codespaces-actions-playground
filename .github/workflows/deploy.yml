@@ -51,5 +51,4 @@ jobs:
         run: |
           git config --global user.name 'Samuel Olwe'
           git config --global user.email 'sam.olwe@gmail.com'
-          git commit -am "Automated report"
           git push -u --force origin release
