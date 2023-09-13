@@ -24,4 +24,5 @@ jobs:
           ref: release
       - name: Push to release branch  
         run: |
+          git remote add upstream git@github.com:samhotep/codespaces-actions-playground.git
           git push --force upstream HEAD:release
